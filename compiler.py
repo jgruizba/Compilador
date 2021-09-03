@@ -20,10 +20,15 @@ int b=a+3;
     float daa = 0.9887;
     double asd = 7.889;
     long zzz = 43242;'''
+#Con archivo
+with open('Test','r') as f:
+  lex = Lexer(f.read())
+  lex.scan()
+  for i in lex.tokens:
+    print(i)
 
-#with open('Test','r') as f:
-#lex = Lexer(f.read())
-lex = Lexer(a)
+#Con variable
+'''lex = Lexer(a)
 lex.scan()
 for i in lex.tokens:
-   print(i)
+   print(i)'''
